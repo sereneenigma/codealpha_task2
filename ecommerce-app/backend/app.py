@@ -71,4 +71,11 @@ def create_app():
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=os.environ.get("FLASK_DEBUG") == "1")
+    port = int(os.environ.get("PORT", 5000))
+    print("\n" + "=" * 60)
+    print(">> ShopKart Marketplace is LIVE!")
+    print(f">> Open in your web browser: http://localhost:{port}")
+    print(">> Keep this terminal window OPEN while browsing the store.")
+    print(">> (Do NOT press CTRL+C unless you want to stop the server)")
+    print("=" * 60 + "\n")
+    app.run(host="0.0.0.0", port=port, debug=False, use_reloader=False)
