@@ -21,10 +21,21 @@
   </div>
   <button class="hero-nav prev" aria-label="Previous slide">‹</button><button class="hero-nav next" aria-label="Next slide">›</button>
   <div class="hero-dots"></div>
+<section class="trust-strip home-only" aria-label="Why shop with us">
+  <div class="trust-item"><div class="icon">🚚</div><div><strong>Free Delivery</strong><span>On all orders above ₹499</span></div></div>
+  <div class="trust-item"><div class="icon">🔄</div><div><strong>7 Days Replacement</strong><span>Hassle-free return policy</span></div></div>
+  <div class="trust-item"><div class="icon">🛡️</div><div><strong>100% Genuine</strong><span>Direct from verified brands</span></div></div>
+  <div class="trust-item"><div class="icon">💳</div><div><strong>Secure Payments</strong><span>UPI, Cards, NetBanking &amp; COD</span></div></div>
 </section>
 <section class="panel cat-strip home-only" id="cat-strip" aria-label="Shop by category" style="margin-top:12px"></section>
 <section class="panel home-only" id="deals" style="margin-top:12px">
-  <h2 class="section-title">Best deals today</h2>
+  <div class="deals-header">
+    <div class="deals-title-wrap">
+      <h2 class="section-title" style="margin:0">⚡ Deals of the Day</h2>
+      <div class="countdown-timer" id="deals-timer"><span class="clock-icon">⏰</span> <span id="timer-text">Loading…</span></div>
+    </div>
+    <a class="btn btn-sm btn-ghost" href="index.html?sort=discount">View all deals</a>
+  </div>
   <div class="carousel"><button class="carousel-btn prev" aria-label="Scroll left">‹</button><div class="carousel-track" id="deals-track"></div><button class="carousel-btn next" aria-label="Scroll right">›</button></div>
 </section>
 <div id="shelves" class="home-only"></div>
