@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- If hosting the frontend separately from the API, uncomment and set your backend URL: -->
+<!-- <meta name="api-base" content="https://your-backend.onrender.com"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<title>Login or Sign up — ShopKart</title>
+</head>
+<body data-page="login">
+<div id="site-header"></div>
+<main class="container" id="main">
+
+<div class="auth">
+  <div class="auth-side"><h2>Your cart, orders and reviews in one place</h2><p>Log in or create an account to check out in a few taps.</p></div>
+  <div class="auth-main">
+    <div class="tabs" role="tablist"><button class="on" data-mode="login" role="tab">Login</button><button data-mode="register" role="tab">Sign up</button></div>
+    <div id="auth-error" class="alert alert-error hidden" role="alert"></div>
+    <form id="login-form">
+      <div class="field"><label for="l-email">Email</label><input id="l-email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="l-pass">Password</label><input id="l-pass" type="password" required autocomplete="current-password"></div>
+      <button class="btn btn-buy" type="submit" style="width:100%">Login</button>
+    </form>
+    <form id="register-form" class="hidden">
+      <div class="field"><label for="r-name">Full name</label><input id="r-name" required minlength="2" autocomplete="name"></div>
+      <div class="field"><label for="r-email">Email</label><input id="r-email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="r-pass">Password (6+ characters)</label><input id="r-pass" type="password" required minlength="6" autocomplete="new-password"></div>
+      <button class="btn btn-buy" type="submit" style="width:100%">Create account</button>
+    </form>
+  </div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- If hosting the frontend separately from the API, uncomment and set your backend URL: -->
+<!-- <meta name="api-base" content="https://your-backend.onrender.com"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<title>ShopKart — Online Shopping for Mobiles, Fashion, Electronics & More</title>
+</head>
+<body data-page="home">
+<div id="site-header"></div>
+<main class="container" id="main">
+
+<section class="hero home-only" aria-label="Featured offers">
+  <div class="hero-track">
+    <div class="hero-slide s1"><h2>Latest smartphones &amp; laptops, up to 40% off</h2><p>Top brands. Easy EMI. Free delivery over ₹499.</p><a class="btn" href="index.html?category=smartphones,laptops,tablets,mobile-accessories">Shop electronics</a></div>
+    <div class="hero-slide s2"><h2>Fashion refresh: new season styles</h2><p>Shirts, dresses, shoes and watches at marked-down prices.</p><a class="btn" href="index.html?category=mens-shirts,womens-dresses,tops,mens-shoes,womens-shoes">Shop fashion</a></div>
+    <div class="hero-slide s3"><h2>Home, beauty &amp; groceries delivered fast</h2><p>Everything for your home, from furniture to fragrances.</p><a class="btn" href="index.html?category=furniture,home-decoration,groceries,beauty,fragrances,skin-care">Shop home &amp; living</a></div>
+  </div>
+  <button class="hero-nav prev" aria-label="Previous slide">‹</button><button class="hero-nav next" aria-label="Next slide">›</button>
+  <div class="hero-dots"></div>
+</section>
+<section class="panel cat-strip home-only" id="cat-strip" aria-label="Shop by category" style="margin-top:12px"></section>
+<section class="panel home-only" id="deals" style="margin-top:12px">
+  <h2 class="section-title">Best deals today</h2>
+  <div class="carousel"><button class="carousel-btn prev" aria-label="Scroll left">‹</button><div class="carousel-track" id="deals-track"></div><button class="carousel-btn next" aria-label="Scroll right">›</button></div>
+</section>
+<div id="shelves" class="home-only"></div>
+<h2 class="section-title home-only" style="margin:18px 0 0">All products</h2>
+<div class="shop">
+  <aside class="panel filters">
+    <form id="filters-form"><h3>Filters</h3>
+      <div class="field"><label for="f-category">Category</label><select id="f-category"></select></div>
+      <div class="field"><label>Price (₹)</label><div class="price-row"><input id="f-min" type="number" min="0" placeholder="Min" aria-label="Minimum price"><input id="f-max" type="number" min="0" placeholder="Max" aria-label="Maximum price"></div></div>
+      <div class="field"><label for="f-rating">Customer rating</label><select id="f-rating"><option value="">Any</option><option value="4">4★ &amp; above</option><option value="3">3★ &amp; above</option></select></div>
+      <button class="btn btn-sm" type="submit" style="width:100%">Apply filters</button>
+      <button class="btn btn-sm btn-ghost" type="button" id="f-clear" style="width:100%;margin-top:8px">Clear all</button>
+    </form>
+  </aside>
+  <section aria-label="Products">
+    <div class="panel toolbar"><span class="count" id="result-count" aria-live="polite">Loading…</span>
+      <label for="f-sort" class="muted">Sort by</label>
+      <select id="f-sort"><option value="relevance">Relevance</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option><option value="rating">Customer rating</option><option value="discount">Biggest discount</option></select></div>
+    <div class="grid" id="grid"></div>
+    <p style="text-align:center"><button class="btn hidden" id="load-more">Load more products</button></p>
+  </section>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

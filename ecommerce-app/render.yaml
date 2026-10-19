@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: shopkart
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn --chdir backend app:app --workers 2 --preload --bind 0.0.0.0:$PORT
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_ENV
+        value: production
+      - key: DATABASE_URL        # paste a Render PostgreSQL "Internal Database URL" (optional; SQLite is used if unset)
+        sync: false
